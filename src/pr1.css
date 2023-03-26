@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+body{
+    background-color: rgb(39, 38, 38);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.container{
+    width: 1440px;
+    display: block;
+    margin: 0 auto ;
+}
+.row{
+    display: flex;
+}
+.w-50{
+    width: 50%;
+}
+.w-100{
+    width: 100%;
+}
+.image-box{
+    display: block;
+    margin:  0 auto;
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    border: 1px solid rgb(172, 172, 249);
+    overflow: hidden;
+    transition: 0.5s;
+    animation: border 1s linear infinite reverse;
+    box-shadow: 0px 0px 5px rgb(175,172,249);
+}
+@keyframes border {
+    0%{
+        box-shadow: 0px 0px 10px rgb(175,172,249);
+    }
+    50%{
+        box-shadow: 0px 0px 1px rgb(175,172,249);
+    }
+    100%{
+        box-shadow: 0px 0px 10px rgb(175,172,249);
+    }
+}
+.p-1{
+    padding-right: 100px;
+}
+.b-right{
+    border-right: 1px solid white;
+}
+.align-item-center{
+    align-items: center;
+}
+.image-box img{
+    height: 100%;
+    width: 100%;
+    transform: translateY(21px);
+}
+.bio{
+    color: rgb(172, 172, 249);
+}
+.bio h2{
+    margin-bottom: 28px;
+    position: relative;
+    transition: 0.5s;
+}
+.bio h2::before{
+    position: absolute;
+    content: '';
+    height: 2px;
+    width: 10px;
+    box-shadow: 0px 0px 10px 1px white;
+    background-color: aliceblue;
+    bottom: -5px;
+    transform: 0.5s;
+    animation: name 2s linear infinite alternate;
+}
+@keyframes name {
+    0%{
+        left: 0;
+        width: 10px;
+    }
+    50%{
+        width: 34px;
+    }
+    100%{
+        left: 250px;
+        width: 10px;
+    }
+}
+.bio h2 span{
+    color: white;
+}
+.bio p{
+    line-height: 1.5;
+    width: 550px
+}
+.bio p span{
+    color: white;
+}   
